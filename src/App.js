@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import CheckboxListSecondary from './components/PostList';
+import Search from './components/Search';
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      filterText:''
+    }
+  }
+
+  filterUpdate(value){
+    this.setState({
+      filterText:value
+    })
+  }
+
+render() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search 
+      filterText={this.state.filterText}
+      filterUpdate={this.filterUpdate.bind(this)}
+      />
+      <CheckboxListSecondary
+      filterText={this.state.filterText}
+      />
     </div>
   );
-}
+  }
+};
 
 export default App;
