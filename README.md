@@ -1,9 +1,12 @@
-## List of contacts. TeaCode
+## List of contacts. General Info
 
 ### Webpage that displays a list of contacts in the following format:
 {avatar} | {first_name last_name} | {checkbox}. 
 There is a text input at the top of the list that allows you to filter the contacts by name and surname.
 
+## Technologies
+
+### Project is created with React v17.0.1
 
 ## Getting Started with Create React App
 
