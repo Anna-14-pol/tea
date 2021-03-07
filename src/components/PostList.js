@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Checkbox from '@material-ui/core/Checkbox';
-import Avatar from '@material-ui/core/Avatar';
+import {
+  Avatar,
+  Checkbox,
+  ListItemAvatar,
+  ListItemText,
+  ListItemSecondaryAction,
+  ListItem,
+  List,
+  makeStyles,
+} from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,7 +40,7 @@ export default function CheckboxListSecondary({filterText}) {
       return isReversed * a.last_name.localeCompare(b.last_name);
     }) 
     .filter(value => {
-      return (value.first_name.indexOf(filterText) >= 0 || value.last_name.indexOf(filterText) >= 0)
+      return (value.first_name.toLowerCase().indexOf(filterText.toLowerCase()) >= 0 || value.last_name.toLowerCase().indexOf(filterText.toLowerCase()) >= 0)
     })
 
     const handleToggle = (value) => () => {

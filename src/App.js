@@ -11,7 +11,7 @@ class App extends React.Component {
     }
   }
 
-  filterUpdate(value){
+  filterUpdate = (value) => {
     this.setState({
       filterText:value
     })
@@ -23,7 +23,7 @@ render() {
     <div className="App">
       <Search 
       filterText={this.state.filterText}
-      filterUpdate={this.filterUpdate.bind(this)}
+      filterUpdate={this.filterUpdate}
       />
       <CheckboxListSecondary
       filterText={this.state.filterText}
