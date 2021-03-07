@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+## List of contacts. TeaCode
+
+### Webpage that displays a list of contacts in the following format:
+{avatar} | {first_name last_name} | {checkbox}. 
+There is a text input at the top of the list that allows you to filter the contacts by name and surname.
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
